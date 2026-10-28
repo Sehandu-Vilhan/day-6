@@ -1,6 +1,6 @@
 
 
- let calHitory = ["10", "20", "30", "40"];
+ let calHitory = [];
 
 function clickMe() {
 
@@ -12,9 +12,13 @@ function clickMe() {
  
     let num2 = parseInt(txtvalue2);
 
+
+
+    
+        
+    
     let total = num1 + num2;
         console.log(total);
-
         document.getElementById("lblSelection").innerHTML = "<h1>" + txtvalue + "</h1>";
         document.getElementById("lblSelection2").innerHTML = "<h1>" + txtvalue2 + "</h1>";
         document.getElementById("totalx").innerHTML = "<h1>" + total + "</h1>";
@@ -22,18 +26,23 @@ function clickMe() {
 
 
 
+    //  for (let i = 0; i < array.length; i++) {
+    //     const element = array[calHitory];
 
 
 
+        calHitory.push(num1+"+"+num2+ "=" + total );
 
-calHitory.push(total);
+     
+      for (let i = 0; i < calHitory; i++) {
+          const element = calHitory[i];
+
+        document.getElementById("calHitory").innerHTML+= "<li>" + i +  "</li>";
+
+
+      }
 
     
-    console.log(calHitory); 
-    document.getElementById("totalx").innerHTML = "<h1>" + calHitory +  "</h1>";
-
-    document.getElementById().innerHTML = "<h2>" +" num1 num2  "+ "</h2>";    
-      
 
 }
 
